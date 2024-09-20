@@ -24,11 +24,17 @@ def fibonacci(n):
 **Decorator parameters**:
 
 * strategy: Eviction strategy (lru, lfu, fifo).
+
 * max_size: Maximum cache size.
+
 * ttl: Time-to-live of items in the cache (in seconds).
+
 * Internal structure:
 
 * cache_class: Class representing the cache (LRUCache, LFUCache, FIFOCache).
+
 * evictor: Object responsible for managing cache item eviction.
+
 * serialize/deserialize: Functions for serializing and deserializing data.
+
 * cache_lock: Synchronization mechanism for cache access.

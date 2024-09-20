@@ -25,7 +25,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='memocache',              
-    version='0.0.2',               
+    version='0.0.3',               
     description='A decorator that optimizes function execution by caching results. With support for different eviction strategies (LFU, LRU, FIFO).',
     long_description=open(file='docs/README.rsp', encoding='utf-8').read(),
     long_description_content_type='text/markdown',

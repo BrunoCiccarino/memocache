@@ -80,7 +80,7 @@ def _create_memo_decorator(strategy='lfu', max_size=100, ttl=None):
                         cached_result = f.read()
                     return deserialize(cached_result)
                 except Exception as e:
-                    print(f"Erro ao carregar o arquivo de cache: {e}")
+                    raise Exception(f"Error loading cache file: {e}")
 
         
             result = func(*args, **kwargs)
@@ -89,10 +89,9 @@ def _create_memo_decorator(strategy='lfu', max_size=100, ttl=None):
             try:
                 cache.put(hash_key, serialized_result)
                 cache_lock.acquire()
-                print(f"Salvando no arquivo: {cache_path}")
                 save_to_file(cache_path, serialized_result)
             except Exception as e:
-                print(f"Erro ao salvar o arquivo: {e}")
+                raise Exception(f"Error saving file:{e}")
             finally:
                 cache_lock.release()
 
