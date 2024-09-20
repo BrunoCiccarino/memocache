@@ -1,5 +1,6 @@
 **Module: memo**
 
+
 **Description:**
 This module provides a `memo` decorator that implements a caching mechanism for function results. The goal is to optimize performance by avoiding redundant calculations.
 
@@ -17,7 +18,8 @@ from memo import memo
 def fibonacci(n):
     if n < 2:
         return n
-    return fibonacci(n-1) + fibonacci(n-2)```
+    return fibonacci(n-1) + fibonacci(n-2)
+    ```
 
 **Decorator parameters**:
 
