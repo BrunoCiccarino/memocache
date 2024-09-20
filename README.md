@@ -5,4 +5,4 @@ The `memo` decorator is a Python tool designed to optimize function performance 
 
 ### Installation
 ```bash
-pip install your_package  # Replace with your package name
+pip install memocache  
