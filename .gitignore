@@ -1,2 +1,7 @@
 __pycache__
 __test__
+build
+dist
+memocache.egg-info
+memopy.egg-info
+.env
